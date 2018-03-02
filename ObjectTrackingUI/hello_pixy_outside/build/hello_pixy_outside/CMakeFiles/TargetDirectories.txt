@@ -1,0 +1,3 @@
+/mnt/d/DocumentsD/VisualStudio/repos/ObjectTrackingUI/ObjectTrackingUI/hello_pixy_outside/build/hello_pixy_outside/CMakeFiles/edit_cache.dir
+/mnt/d/DocumentsD/VisualStudio/repos/ObjectTrackingUI/ObjectTrackingUI/hello_pixy_outside/build/hello_pixy_outside/CMakeFiles/rebuild_cache.dir
+/mnt/d/DocumentsD/VisualStudio/repos/ObjectTrackingUI/ObjectTrackingUI/hello_pixy_outside/build/hello_pixy_outside/CMakeFiles/hello_pixy_outside.dir
