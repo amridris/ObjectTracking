@@ -1,1 +1,0 @@
-bash -c "./build_hello_pixy_outside.sh"

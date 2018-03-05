@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/hello_pixy_outside.dir/hello_pixy_outside.cpp.o  -o hello_pixy_outside -rdynamic -lpixyusb -lboost_thread -lboost_system -lboost_chrono -lboost_date_time -lboost_atomic -lpthread -lusb-1.0 

@@ -21,6 +21,7 @@ namespace ObjectTrackingUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             System.Diagnostics.Process cmd = new System.Diagnostics.Process();
             cmd.StartInfo.FileName = "bash.exe";
             cmd.StartInfo.RedirectStandardInput = true;
@@ -34,6 +35,7 @@ namespace ObjectTrackingUI
             cmd.StandardInput.Close();
             cmd.WaitForExit();
             Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+            */
         }
 
         private void btnPixyRun_Click(object sender, EventArgs e)
@@ -82,6 +84,24 @@ namespace ObjectTrackingUI
             Console.WriteLine(item.itemNumber);
             item.itemNumber = 20;
             Console.WriteLine(item.itemNumber);
+        }
+
+        private void btnPySerial_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "Python.exe";
+            startInfo.Arguments = "yourfile.py";
+            process.StartInfo = startInfo;
+            process.Start();
+            process.WaitForExit();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,9 +1,0 @@
-# for building hello_pixy_outside (from ObjectTrackingUbuntu)
-cd hello_pixy_outside/scripts
-./build_hello_pixy_outside.sh
-
-# for running hello_pixy_outside
-cd build/hello_pixy_outside
-OR
-cd hello_pixy_outside/build/hello_pixy_outside
-sudo ./hello_pixy_outside
