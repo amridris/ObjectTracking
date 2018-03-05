@@ -14,6 +14,7 @@ namespace ObjectTrackingUI
 {
     public partial class ObjectTrackingDevForm : Form
     {
+        private String mStr;
         public ObjectTrackingDevForm()
         {
             InitializeComponent();
@@ -58,7 +59,6 @@ namespace ObjectTrackingUI
 
         private void ObjectTracking_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnPixyRun_Click_1(object sender, EventArgs e)
@@ -102,6 +102,48 @@ namespace ObjectTrackingUI
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSendArduinoSerial_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                serArduinoPixy.WriteLine(textArduinoPixySerial.Text);
+            }
+            catch (Exception ex)
+            {
+                lblDebugMessage.Text = ex.ToString();
+            }
+        }
+
+        private void tmrArduinoPixy_Tick(object sender, EventArgs e)
+        {
+            lblArduinoSerial.Text = mStr;
+        }
+
+        private void serArduinoPixy_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            mStr = serArduinoPixy.ReadLine();
+        }
+
+        private void btnStartArduinoSerial_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                serArduinoPixy.Open();
+                tmrArduinoPixy.Start();
+            }
+            catch (Exception ex)
+            {
+                lblDebugMessage.Text = ex.ToString();
+            }
+            
+        }
+
+        private void ObjectTrackingDevForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serArduinoPixy.Close();
+            tmrArduinoPixy.Stop();
         }
     }
 }
