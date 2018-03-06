@@ -22,7 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PixyArduinoSerial.py" />
-    <Compile Include="serial_read_write.py">
+    <Compile Include="serial_read_write%28GOOD HANDLES%29.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
