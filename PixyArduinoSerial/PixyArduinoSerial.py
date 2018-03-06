@@ -2,6 +2,7 @@ from datetime import datetime
 import time
 import serial, io
 import sys
+import numpy as np
 
 print("PixyArduinoSerial...",time.strftime("%Y-%m-%d_%H-%M-%S"))
 outfile = '../logs/pixy_raw.txt'
@@ -12,6 +13,16 @@ pixy_arduino_ser = serial.Serial()
 pixy_arduino_ser.port = pixy_port
 pixy_arduino_ser.baudrate = pixy_baud
 
+num_numbers = lambda x: (len(x)-1)/2
+iter_words = lambda x: x*2+3
+
+def pixy_ser_parse(input):
+    words = input.split(" ")
+    size = num_numbers(words)
+    numbers = np.zeros(size)
+    for count in range(0,size):
+        numbers[i] = words[iter_words(i)]
+    return numbers
 
 def pixy_ser_open():
     if not pixy_arduino_ser.isOpen():
