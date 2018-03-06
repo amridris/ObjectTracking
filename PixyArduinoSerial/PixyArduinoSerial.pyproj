@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e433759a-17e1-4025-b4bd-c6016b78bed7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PixyArduinoSerial.py</StartupFile>
+    <StartupFile>PixySynthData.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PixyArduinoSerial</Name>
     <RootNamespace>PixyArduinoSerial</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PixyArduinoSerial.py" />
+    <Compile Include="PixySynthData.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="serial_read_write%28GOOD HANDLES%29.py">
       <SubType>Code</SubType>
     </Compile>
