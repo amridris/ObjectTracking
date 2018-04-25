@@ -22,7 +22,7 @@ int main()
     start = clock();
     QSqlDatabase db;
     db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName("C:/Users/admin/Desktop/db.sqlite");
+        db.setDatabaseName("C:/Users/admin/Desktop/cameraDatabase.sqlite");
 
         if(!db.open())
         {
